@@ -1,0 +1,20 @@
+.main-page{
+    height: 300vh;
+    /* border: 3px solid red; */
+    /* background-color: whitesmoke; */
+    background-image: url('../../assets/bg-test.jpg');
+}
+
+.floatingmenubar-div{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.test-div{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

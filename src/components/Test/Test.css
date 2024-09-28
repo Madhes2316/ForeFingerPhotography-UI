@@ -1,0 +1,152 @@
+.main-bottom-floater-menu-div{
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 15px;
+    /* border: 2px solid greenyellow; */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    width: 94%;
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.menu-div{
+    height: 40%;
+    /* border: 2px solid red; */
+}
+
+.menu-div ul{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+.menu-div ul li{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.social-div{
+    height: 30%;
+    /* border: 2px solid red; */
+    margin-top: 0px;
+}
+
+.social-div ul{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social-div ul li a{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.social-div ul li a img{
+    width: 20px;
+    height: 20px;
+}
+
+.social-div ul li a:hover img{
+    fill: rgba(12, 10, 10, 0.824);
+    animation: jiggle 0.5s infinite ease-in-out;
+  }
+  
+  @keyframes jiggle {
+    0%, 100% { transform: rotate(0deg); } /* Start and end positions */
+    25% { transform: rotate(10deg); } /* Slight tilt */
+    50% { transform: rotate(-10deg); } /* Opposite tilt */
+    75% { transform: rotate(3deg); } /* Return a bit to the other side */
+  }
+
+.social-div ul li{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+.contactus-div{
+    height: 15%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -26px;
+}
+
+.contactus-div button{
+    border-radius: 20px;
+    height: 80%;
+    width: 99%;
+    background-color: #F7C601;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.bottom-button-div{
+    height: 15%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button-div{
+    border-radius: 20px;
+    height: 80%;
+    width: 99%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    margin-bottom: -20px;
+}
+
+.menu-button-div .logoMenu-div{
+    display: flex;
+}
+
+.menu-button-div .logoMenu-div button{
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.menu-button-div .logoMenu-div svg{
+    fill: #F7C601;
+}
+
+.closelogo-div svg{
+    fill: white;
+}
+
+@media only screen and (min-width: 500px) {
+    .main-bottom-floater-menu-div{
+        height: 95%;
+    }
+}
+
+hr{
+    border-color: lightgrey;
+    background-color: lightgrey;
+    color: lightgrey;
+}
