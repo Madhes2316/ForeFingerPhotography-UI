@@ -1,3 +1,39 @@
+.button-div{
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 15px;
+    height: 64px;
+    width: 192px;
+    border: 7px solid rgb(234, 232, 232);
+    border-radius: 200px;
+    /* display: none; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+}
+
+.button-div .iconMenu-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-div .hamburgerMenuSvg-div{
+    cursor: pointer;
+}
+
+.button-div .iconMenu-div a{
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
 .main-bottom-floater-menu-div{
     bottom: 0;
     position: fixed;
@@ -92,7 +128,7 @@
     border-radius: 20px;
     height: 80%;
     width: 99%;
-    background-color: #F7C601;
+    background-color: var(--ffp-primary-color);
     color: white;
     font-family: 'Poppins',sans-serif;
     font-weight: bolder;
@@ -132,11 +168,12 @@
 }
 
 .menu-button-div .logoMenu-div svg{
-    fill: #F7C601;
+    fill: var(--ffp-primary-color);
 }
 
 .closelogo-div svg{
     fill: white;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 500px) {

@@ -1,0 +1,65 @@
+.long-button-div{
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 35px;
+  height: 65px;
+  width: 80%;
+  border: 6px solid rgb(234, 232, 232);
+  border-radius: 200px;
+  background-color: hsla(0, 0%, 100%, .64);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.long-button-div ul {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly; /* Distributes space around the items */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Removes default list styles */
+  align-items: center;
+}
+
+.long-menu-li:hover{
+  background-color: var(--ffp-primary-color);
+  border-radius: 20px;
+}
+
+.long-menu-li li{
+  display: flex;
+  cursor: pointer;
+  color: rgba(7, 9, 15, .32);
+  transition: 0.3s;
+  font-family: 'Poppins',sans-serif;
+  font-weight: bolder;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+
+.long-menu-li:hover span{
+  color: rgba(12, 10, 10, 0.824);
+}
+
+.long-menu-li:hover svg{
+  transition: transform 0.2s ease-in-out;
+}
+
+.long-menu-li:hover svg{
+  fill: rgba(12, 10, 10, 0.824);
+  animation: jiggle 0.5s infinite ease-in-out;
+}
+
+@keyframes jiggle {
+  0%, 100% { transform: rotate(0deg); } /* Start and end positions */
+  25% { transform: rotate(10deg); } /* Slight tilt */
+  50% { transform: rotate(-10deg); } /* Opposite tilt */
+  75% { transform: rotate(3deg); } /* Return a bit to the other side */
+}

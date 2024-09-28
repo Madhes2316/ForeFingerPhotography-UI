@@ -5,14 +5,7 @@
     background-image: url('../../assets/bg-test.jpg');
 }
 
-.floatingmenubar-div{
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.test-div{
+.floatingNavBar-div{
     margin-top: 12px;
     display: flex;
     justify-content: center;

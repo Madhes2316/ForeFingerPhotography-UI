@@ -1,15 +1,11 @@
 import './MainPage.css';
-import FloatingMenuBar from '../FloatingMenu/FloatingMenuBar';
-import Test from '../Test/Test';
+import FloatingNavBar from '../FloatingNavBar/FloatingNavBar';
 
 const MainPage = ()=>{
     return(
         <div className="main-page">
-            {/* <div className='floatingmenubar-div'>
-            <FloatingMenuBar />
-            </div> */}
-            <div className='test-div'>
-                <Test />
+            <div className='floatingNavBar-div'>
+                <FloatingNavBar />
             </div>
         </div>
     )
