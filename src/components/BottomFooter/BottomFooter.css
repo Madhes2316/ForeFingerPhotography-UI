@@ -1,0 +1,115 @@
+.bottomfooter-div{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left-all-div{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+
+.quote-div{
+}
+
+.quote-div span{
+    color: white;
+    font-size: 37px;
+    font-weight: bolder;
+    font-family: 'Poppins',sans-serif;
+    overflow-wrap: break-word;
+}
+
+.callus-div{
+    display: flex;
+    font-family: 'Poppins',sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: var(--ffp-primary-color);
+    font-family: 'Poppins',sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.callus-div:hover{
+    background-color: black;
+    border: 3px solid var(--ffp-primary-color);
+    color: white;
+}
+
+.socials-div ul{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.socials-div ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.socials-div ul li a span{
+    font-family: 'Poppins',sans-serif;
+    color: hsla(0, 0%, 100%, 0.5); /* White with 50% opacity */
+    font-weight: bold;
+}
+
+.socials-div ul li a span:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+.socials-div ul li a:hover svg {
+    fill: white; /* Change SVG fill color to white on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+.socials-div ul li a svg{
+    width: 20px;
+    height: 20px;
+    fill: hsla(0, 0%, 100%, 0.5); /* White with 50% opacity */
+}
+
+
+.copyright-div span{
+    font-family: 'Poppins',sans-serif;
+    color: hsla(0, 0%, 100%, 0.5); /* White with 50% opacity */
+    font-size: small;
+}
+
+.copyright-div{
+    margin-bottom: 90px;
+}
+
+.right-img-div{
+    display: flex;
+    align-items: center;
+}
+
+.right-img-div img{
+    width: 1000px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 499px) {
+    /* Your styles for screens below 500px go here */
+    .socials-div ul{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .right-img-div{
+        display: none;
+    }
+  }

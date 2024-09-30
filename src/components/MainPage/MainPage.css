@@ -1,5 +1,5 @@
 .main-page{
-    height: 300vh;
+    height: 100vh;
     /* border: 3px solid red; */
     /* background-color: whitesmoke; */
     background-image: url('../../assets/bg-test.jpg');
@@ -10,4 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+.footer-div{
+    margin-top: auto;
 }

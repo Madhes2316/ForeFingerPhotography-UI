@@ -1,11 +1,19 @@
 import './MainPage.css';
 import FloatingNavBar from '../FloatingNavBar/FloatingNavBar';
+import TopWebPageLogo from '../TopWebPageLogo/TopWebPageLogo';
+import BottomFooter from '../BottomFooter/BottomFooter';
+import HeroAnimation from '../MainPageContents/HeroAnimation/HeroAnimation';
 
 const MainPage = ()=>{
     return(
         <div className="main-page">
+            <TopWebPageLogo />
+            <HeroAnimation />
             <div className='floatingNavBar-div'>
                 <FloatingNavBar />
+            </div>
+            <div className='footer-div'>
+                <BottomFooter />
             </div>
         </div>
     )

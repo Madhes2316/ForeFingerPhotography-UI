@@ -1,4 +1,5 @@
 .long-button-div{
+  z-index: 1000; /* Make sure it's on top of other content */
   bottom: 0;
   position: fixed;
   margin-bottom: 35px;
@@ -6,7 +7,7 @@
   width: 80%;
   border: 6px solid rgb(234, 232, 232);
   border-radius: 200px;
-  background-color: hsla(0, 0%, 100%, .64);
+  background-color: var(--transparent-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
