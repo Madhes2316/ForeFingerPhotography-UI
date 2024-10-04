@@ -1,4 +1,67 @@
-.heroAnimation-div{
-    height: 1200px;
-    border: 2px solid greenyellow;
+.heroAnimation-text-div{
+    /* height: 2200px; */
+    /* border: 2px solid rgb(92, 47, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.welcometext-div{
+    /* border: 2px solid orange; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.welcometext-div .welcome-span{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.welcometext-div .welcome-span span{
+    color: var(--ffp-primary-color);
+}
+
+.welcometext-div .ffpqoute-div{
+    font-family: cursive,sans-serif;
+    /* font-style: italic;  */
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.welcometext-div .ffpqoute-div span{
+    color: var(--ffp-primary-color);
+}
+
+.icon-quote-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-quote-div img{
+    width: 25px;
+}
+
+
+.heroImage-div{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.heroImage-div img{
+    width: 50%;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .welcometext-div .welcome-span{
+        font-size: xxx-large;
+    }
+  }
