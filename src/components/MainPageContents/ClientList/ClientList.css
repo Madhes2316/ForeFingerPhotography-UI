@@ -1,0 +1,67 @@
+.clientList-main-div{
+    margin-top: 20px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourClients-btntxt-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+}
+
+.ourClients-btntxt-div button{
+    width: 180px;
+    height: 50px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: rgba(7, 9, 15, .4);
+}
+
+.ourClients-btntxt-div button:hover{
+    color: black;
+    cursor: default;
+}
+
+.ourClients-btntxt-div span{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: xx-large;
+    color: black;
+}
+
+.clientBox-list-div{
+    margin-top: 20px;
+    /* border: 2px solid greenyellow; */
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,150px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.clientSpace-div{
+    /* border: 2px solid blue; */
+    border-radius: 20px;
+    height: 80px;
+    width: 150px;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .ourClients-btntxt-div span{
+        font-size: medium;
+    }
+}

@@ -71,11 +71,11 @@ const HeroContent = () => {
                 effect={'cards'}
                 grabCursor={true}
                 modules={[EffectCards]}
-                className="mySwiper"
+                className="ourProjects-Swiper"
                 onSlideChange={handleSlideChange}
               >
                 {swiperSliderArray.map(slide => (
-                  <SwiperSlide key={slide.id}>
+                  <SwiperSlide className='ourProjects-SwiperSlider' key={slide.id}>
                       <img src={slide.imgUrl} alt={slide.imgTitle || 'Slide image'} />
                   </SwiperSlide>
                 ))}

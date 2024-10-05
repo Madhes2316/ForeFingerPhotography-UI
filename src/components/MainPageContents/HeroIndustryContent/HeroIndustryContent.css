@@ -1,9 +1,10 @@
-.maincardholder-div{
+.mainIndustrial-div{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.maincard-div{
+.mainIndustrialCard-div{
     --tw-bg-opacity: 1;
     background-color: rgb(248 248 248 / var(--tw-bg-opacity));
     border-radius: 40px;
@@ -12,7 +13,7 @@
     padding: 30px;
 }
 
-.textitems-div{
+.industrial-textitems-div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +21,7 @@
     margin-top: 20px;
 }
 
-.textitems-div .rp-span{
+.industrial-textitems-div .industrialProjects-span{
     font-family: 'Poppins',sans-serif;
     font-style: italic;
     font-weight: bold;
@@ -28,7 +29,7 @@
     color: lightgray;
 }
 
-.textitems-div .it-span{
+.industrial-textitems-div .currentTitle-span{
     font-family: 'Poppins',sans-serif;
     font-style: italic;
     font-weight: bold;
@@ -36,27 +37,28 @@
     color: black;
 }
 
-.ourProjects-Swiper {
-    width: 340px;
-    height: 420px;
-}
-
-.ourProjects-SwiperSlider {
-  border-radius: 20px;
-}
-
-.ourProjects-SwiperSlider img{
+.industrial-swiper {
+    border-radius: 20px;
+    width: 90%;
+  }
+  
+  .industry-swiperSilder {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .industry-swiperSilder img {
+    display: block;
     width: 100%;
-    height: 100%;
-}
+  }
 
-.cardbottombutton-div{
+  .industrial-cardbottombutton-div{
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.cardbottombutton-div button{
+.industrial-cardbottombutton-div button{
     width: 180px;
     height: 50px;
     background-color: var(--ffp-primary-color);
@@ -66,21 +68,23 @@
     color: white;
 }
 
-.cardbottombutton-div button:hover{
+.industrial-cardbottombutton-div button:hover{
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
-    .textitems-div .rp-span {
+  @media only screen and (max-width: 600px) {
+    .industrial-textitems-div .industrialProjects-span {
         font-size: large;
     }
 
-    .textitems-div .it-span{
+    .industrial-textitems-div .currentTitle-span{
         font-size: x-large;
     }
 
-    .ourProjects-Swiper {
-        width: 240px;
-        height: 320px;
+    .industrial-swiper {
+        width: 100%;
+        height: 200px;
       }
   }
+
+  

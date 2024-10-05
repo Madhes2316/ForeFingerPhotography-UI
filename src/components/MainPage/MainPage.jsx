@@ -2,15 +2,13 @@ import './MainPage.css';
 import FloatingNavBar from '../FloatingNavBar/FloatingNavBar';
 import TopWebPageLogo from '../TopWebPageLogo/TopWebPageLogo';
 import BottomFooter from '../BottomFooter/BottomFooter';
-import HeroAnimation from '../MainPageContents/HeroAnimation/HeroAnimation';
-import HeroContent from '../MainPageContents/HeroContent/HeroContent';
+import HomePageContents from '../MainPageContents/HomePageContents/HomePageContents';
 
 const MainPage = ()=>{
     return(
         <div className="main-page">
             <TopWebPageLogo />
-            <HeroAnimation />
-            <HeroContent />
+            <HomePageContents />
             <div className='floatingNavBar-div'>
                 <FloatingNavBar />
             </div>
