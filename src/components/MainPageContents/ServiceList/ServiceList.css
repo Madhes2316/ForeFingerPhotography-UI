@@ -1,0 +1,92 @@
+.serviceList-main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text-serviceList-div{
+    border-radius: 40px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.btn-text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text-div button{
+    width: 200px;
+    height: 50px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: rgba(7, 9, 15, .4);
+}
+
+.btn-text-div span{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    font-style: italic;
+}
+
+.serviceList-div{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,280px);
+    justify-content: center;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.unique-service-div{
+    height: 50px;
+    width: 280px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.unique-service-div span{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .btn-text-div span{
+        font-size: medium;
+    }
+
+    .serviceList-div{
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,170px);
+        justify-content: center;
+        gap: 2px;
+        margin-top: 15px;
+    }
+    
+    .unique-service-div{
+        height: 45px;
+        width: 170px;
+    }
+    
+    .unique-service-div span{
+        font-size: small;
+    }
+
+}
