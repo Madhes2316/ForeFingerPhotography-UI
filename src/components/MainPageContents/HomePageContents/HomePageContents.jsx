@@ -5,6 +5,7 @@ import HeroIndustryContent from '../HeroIndustryContent/HeroIndustryContent';
 import ClientList from '../ClientList/ClientList';
 import AboutUs from '../AboutUs/AboutUs';
 import ServiceList from '../ServiceList/ServiceList';
+import ProjectCounter from '../ProjectCounter/ProjectCounter';
 
 const HomePageContents = () => {
   return (
@@ -14,6 +15,7 @@ const HomePageContents = () => {
         <HeroIndustryContent />
         <AboutUs />
         <ServiceList />
+        <ProjectCounter />
         <ClientList />
     </>
   )

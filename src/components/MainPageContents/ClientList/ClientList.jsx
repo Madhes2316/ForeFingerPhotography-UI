@@ -32,7 +32,7 @@ const ClientList = () => {
     <div className='clientList-main-div'>
         <div className='ourClients-btntxt-div'>
             <button>Our Clients</button>
-            <span>Clients that we were able to Happily Serve</span>
+            <span>Notable Clients that we were able to Serve</span>
         </div>
         <div className='clientBox-list-div'>
             {companyListArray.map(item => (
