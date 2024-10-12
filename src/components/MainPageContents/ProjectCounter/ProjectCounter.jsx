@@ -8,7 +8,7 @@ const ProjectCounter = () => {
         <div className="projectCounter-div">
             <div className="family-events-div">
                 <span>Happy Clients</span>
-                <CountUp className='projectCountUp' end={200} suffix='+' duration={5} enableScrollSpy={true} scrollSpyOnce={true} style={{ fontSize: '55px', fontWeight: 'bold', color: 'var(--ffp-primary-color)' }}/>
+                <CountUp className='projectCountUp' end={1000} suffix='+' duration={5} enableScrollSpy={true} scrollSpyOnce={true} style={{ fontSize: '55px', fontWeight: 'bold', color: 'var(--ffp-primary-color)' }}/>
             </div>
         </div>
     </div>

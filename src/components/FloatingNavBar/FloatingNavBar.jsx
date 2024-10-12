@@ -5,6 +5,7 @@ import wplogo from '../../assets/social-media-logo/wp.svg';
 import maillogo from '../../assets/social-media-logo/mail.svg';
 import calllogo from '../../assets/social-media-logo/call.svg';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import LongFloatingMenuBar from '../LongFloatingMenuBar/LongFloatingMenuBar';
 
 const FloatingNavBar = () => {
@@ -34,15 +35,15 @@ const FloatingNavBar = () => {
         },
         {
             id: 2,
-            liItem: 'Services',
-        },
-        {
-            id: 3,
             liItem: 'Gallery',
         },
         {
-            id: 4,
+            id: 3,
             liItem: 'About Us',
+        },
+        {
+            id: 4,
+            liItem: 'Services',
         },
         {
             id: 5,
@@ -98,7 +99,14 @@ const FloatingNavBar = () => {
                     <div className="menu-div">
                         <ul>
                             {MainMenuArray.map((item) => (
-                                <li key={item.id}>{item.liItem}</li>
+                                <li key={item.id} onClick={() => shortMenuClick()}>
+                                    {/* Conditionally add Link for 'Home' and 'Address' */}
+                                    {(item.liItem === 'Home' || item.liItem === 'Address' || item.liItem === 'Gallery') ? (
+                                        <Link to={`/${item.liItem.toLowerCase().replace(/\s+/g, '-')}`}>{item.liItem}</Link>
+                                    ) : (
+                                        item.liItem
+                                    )}
+                                </li>
                             ))}
                         </ul>
                     </div>

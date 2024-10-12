@@ -87,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .slogan2-div span{
@@ -110,7 +110,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .slogan3-div span{

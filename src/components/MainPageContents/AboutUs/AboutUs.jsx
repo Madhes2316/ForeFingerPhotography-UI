@@ -17,15 +17,15 @@ const AboutUs = () => {
                         <span>We Aim Quality</span>
                     </div>
                     <div className='img-video-div'>
-                        <img src={cameraClick} alt="" />
+                        <img src={cameraClick} alt="camera image" />
                     </div>
                 </div>
                 <div className='slogan2-div'>
                     <span>Affordable Prices</span>
-                    <img src={iceCreamCat} alt="" />
+                    <img src={iceCreamCat} alt="cute cat holding an icecream" />
                 </div>
                 <div className='slogan3-div'>
-                    <img src={headPhoneCat} alt="" />
+                    <img src={headPhoneCat} alt=" cute pink color cat" />
                     <span>Timely Delivery</span>
                 </div>
             </div>

@@ -72,7 +72,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    overflow: auto;
+    overflow: hidden;
+}
+
+.menu-div ul li:hover{
+    cursor: pointer;
+    /* font-size: xx-large; */
 }
 
 .menu-div ul li{
