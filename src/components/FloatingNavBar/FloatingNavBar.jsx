@@ -58,6 +58,7 @@ const FloatingNavBar = () => {
 
     return (
         <>
+        <div className='floatingNavBar-div'>
             {/* Render LongFloatingMenuBar when screen size is more than 1200px */}
             {!isSmallScreen && <LongFloatingMenuBar />}
 
@@ -169,6 +170,7 @@ const FloatingNavBar = () => {
                     </div>
                 </div>
             )}
+            </div>
         </>
     );
 };
