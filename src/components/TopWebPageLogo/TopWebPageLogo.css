@@ -1,7 +1,7 @@
 .topWebPageLogo-div{
     display: flex;
     justify-content: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .topWebPageLogo-div .ffgimg-ffptext-div{

@@ -10,7 +10,7 @@ const AddressPage = () => {
     <div className='mainAddress-div'>
       <div className="addressContent-div">
           <div className="gmaps-div">
-            <iframe src={googleMapsIframe}></iframe>
+            <iframe src={googleMapsIframe} loading='lazy'></iframe>
           </div>
           <div className="addressText-div">
               <span>**Please Click on Directions or View Larger Map to open Google Maps**</span>
