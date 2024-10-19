@@ -9,6 +9,9 @@ const GalleryOneMainPage = () => {
     const onGoBackToGalleryClick = ()=>{
         navigate('/gallery');
     }
+    const onViewPhotosButtonClick = (topicName)=>{
+        navigate(`/gallery/galleryone/imagegallery/${topicName}`);
+    }
   return (
     <div className='galleryOneMain-div'>
         <div className="galleryOneContents-div">
@@ -19,7 +22,7 @@ const GalleryOneMainPage = () => {
                     <div className="cardOneText-body">
                         <h2>Outdoor Shoot</h2>
                         <p>Discover the beauty of outdoor photography, where natural light and stunning landscapes bring moments to life.</p>
-                        <button>View Photos</button>
+                        <button onClick={()=>onViewPhotosButtonClick("outdoor")}>View Photos</button>
                     </div>
                 </div>
                 <div className='galleryOneCard-div'>
@@ -27,7 +30,7 @@ const GalleryOneMainPage = () => {
                     <div className="cardOneText-body">
                         <h2>Candid Shoot</h2>
                         <p>Discover the beauty of outdoor photography, where natural light and stunning landscapes bring moments to life.</p>
-                        <button>View Photos</button>
+                        <button onClick={()=>onViewPhotosButtonClick("candid")}>View Photos</button>
                     </div>
                 </div>
                 <div className='galleryOneCard-div'>
@@ -35,7 +38,7 @@ const GalleryOneMainPage = () => {
                     <div className="cardOneText-body">
                         <h2>Marriage Shoot</h2>
                         <p>Discover the beauty of outdoor photography, where natural light and stunning landscapes bring moments to life.</p>
-                        <button>View Photos</button>
+                        <button onClick={()=>onViewPhotosButtonClick("marriage")}>View Photos</button>
                     </div>
                 </div>
             </div>

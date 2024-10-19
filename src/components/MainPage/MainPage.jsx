@@ -9,6 +9,7 @@ import GalleryMainPage from '../GalleryPageContents/GalleryMainPage/GalleryMainP
 import ScrollToTop from '../ScrollToTopContents/ScrollToTopComponent/ScrollToTop'
 import GalleryOneMainPage from '../GalleryPageContents/GalleryOne/GalleryOneMainPage';
 import GalleryTwoMainPage from '../GalleryPageContents/GalleryTwo/GalleryTwoMainPage';
+import CommonImageGallery from '../GalleryPageContents/CommonImageGallery/CommonImageGallery';
 
 const MainPage = ()=>{
     return(
@@ -23,6 +24,7 @@ const MainPage = ()=>{
                     <Route path='/gallery' element={<GalleryMainPage />} />
                     <Route path='/gallery/galleryone' element={<GalleryOneMainPage />} />
                     <Route path='/gallery/gallerytwo' element={<GalleryTwoMainPage />} />
+                    <Route path='/gallery/galleryone/imagegallery/:topicName' element={<CommonImageGallery />} />
                 </Routes>
                 <FloatingNavBar />
                 <BottomFooter />
