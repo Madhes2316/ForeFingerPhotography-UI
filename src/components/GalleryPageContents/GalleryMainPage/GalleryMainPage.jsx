@@ -1,38 +1,43 @@
 import React from 'react'
 import './GalleryMainPage.css';
-import galleryOneImg from '../../../assets/galleryPage/galleryOne-img.jpg';
-import galleryTwoImg from '../../../assets/galleryPage/galleryTwo-img.jpg';
+import galleryThumbnailOne from '../../../assets/galleryPage/galleryOne-img.jpg';
+import galleryThumbnailTwo from '../../../assets/galleryPage/galleryTwo-img.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const GalleryMainPage = () => {
 
+  const navigate = useNavigate();
   const onGalleryThumbnailClick = (galleryName)=>{
     console.log(galleryName)
+    if (galleryName === "galleryOne") {
+      navigate('/gallery/galleryone');
+    } else if (galleryName === "galleryTwo") {
+      navigate('/gallery/gallerytwo');
+    }
   }
   return (
-    <div className='galleryMainPage-div'>
-      <div className="galleryThumbnail-contents-div">
-          <div className="selectGalleryText-div">
-            <span>Select Your Gallery</span>
-          </div>
-          <div id="card-area">
-          <div className="wrapper">
-                <div className="box-area"> 
-                    <div className="box" onClick={()=> onGalleryThumbnailClick("galleryOne")}>
-                        <img src={galleryOneImg} alt="" />
-                        <div className="overlay">
-                            <h3>Event & LifeStyle Shoot</h3>
-                        </div>
+    <div className='galleryMain-div'>
+        <div className="galleryMainContents-div">
+            <span>Select Any Gallery</span>
+            <div className='galleryMainCard-grid'>
+                <div className='galleryMainCard-div'>
+                    <img src={galleryThumbnailOne} alt="" />
+                    <div className="cardMainText-body">
+                        <h2>Event & LifeStyle Shoot</h2>
+                        <p>Dive into various topics that we want to show you about our event and lifestyle photography.</p>
+                        <button onClick={() => onGalleryThumbnailClick("galleryOne")}>View Gallery</button>
                     </div>
-                    <div className="box"  onClick={()=> onGalleryThumbnailClick("galleryTwo")}>
-                        <img src={galleryTwoImg} alt="" />
-                        <div className="overlay">
-                            <h3>Corp. & Industrial Shoot</h3>
-                        </div>
+                </div>
+                <div className='galleryMainCard-div'>
+                    <img src={galleryThumbnailTwo} alt="" />
+                    <div className="cardMainText-body">
+                        <h2>Corporate & Industrial Shoot</h2>
+                        <p>Dive into various topics that we want to show you about our corporate shoots we have undertaken.</p>
+                        <button onClick={() => onGalleryThumbnailClick("galleryTwo")}>View Gallery</button>
                     </div>
-                </div>            
-          </div>       
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   )
 }

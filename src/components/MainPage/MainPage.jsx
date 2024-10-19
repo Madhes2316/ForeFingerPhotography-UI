@@ -7,6 +7,8 @@ import HomePageContents from '../MainPageContents/HomePageContents/HomePageConte
 import AddressPage from '../AddressPageContents/AddressPage/AddressPage';
 import GalleryMainPage from '../GalleryPageContents/GalleryMainPage/GalleryMainPage';
 import ScrollToTop from '../ScrollToTopContents/ScrollToTopComponent/ScrollToTop'
+import GalleryOneMainPage from '../GalleryPageContents/GalleryOne/GalleryOneMainPage';
+import GalleryTwoMainPage from '../GalleryPageContents/GalleryTwo/GalleryTwoMainPage';
 
 const MainPage = ()=>{
     return(
@@ -19,6 +21,8 @@ const MainPage = ()=>{
                     <Route path='/home' element={<HomePageContents />} />
                     <Route path='/address' element={<AddressPage />} />
                     <Route path='/gallery' element={<GalleryMainPage />} />
+                    <Route path='/gallery/galleryone' element={<GalleryOneMainPage />} />
+                    <Route path='/gallery/gallerytwo' element={<GalleryTwoMainPage />} />
                 </Routes>
                 <FloatingNavBar />
                 <BottomFooter />
