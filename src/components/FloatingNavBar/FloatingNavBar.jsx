@@ -5,7 +5,7 @@ import wplogo from '../../assets/social-media-logo/wp.svg';
 import maillogo from '../../assets/social-media-logo/mail.svg';
 import calllogo from '../../assets/social-media-logo/call.svg';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import LongFloatingMenuBar from '../LongFloatingMenuBar/LongFloatingMenuBar';
 
 const FloatingNavBar = () => {
@@ -56,6 +56,11 @@ const FloatingNavBar = () => {
     const shortMenuClick = () => {
         setIsShortMenuIconClicked((prev) => !prev);
     };
+
+    const navigate = useNavigate();
+    const OnContactUsButtonClick = () =>{
+        navigate('/contactus');
+    }
 
     return (
         <>
@@ -147,7 +152,7 @@ const FloatingNavBar = () => {
                     </div>
                     <hr />
                     <div className="contactus-div">
-                        <button>Contact Us</button>
+                        <button onClick={() => {OnContactUsButtonClick(), shortMenuClick()}}>Contact Us</button>
                     </div>
                     <div className="bottom-button-div">
                         <div className="menu-button-div">

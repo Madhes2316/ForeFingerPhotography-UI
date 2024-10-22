@@ -10,6 +10,7 @@ import ScrollToTop from '../ScrollToTopContents/ScrollToTopComponent/ScrollToTop
 import GalleryOneMainPage from '../GalleryPageContents/GalleryOne/GalleryOneMainPage';
 import GalleryTwoMainPage from '../GalleryPageContents/GalleryTwo/GalleryTwoMainPage';
 import CommonImageGallery from '../GalleryPageContents/CommonImageGallery/CommonImageGallery';
+import ContactUs from '../ContactUsContents/ContactUs';
 
 const MainPage = ()=>{
     return(
@@ -18,13 +19,14 @@ const MainPage = ()=>{
                 <ScrollToTop>
                 <TopWebPageLogo />
                 <Routes>
-                    <Route path='' element={<HomePageContents />} />
+                    <Route path='/' element={<HomePageContents />} />
                     <Route path='/home' element={<HomePageContents />} />
                     <Route path='/address' element={<AddressPage />} />
                     <Route path='/gallery' element={<GalleryMainPage />} />
                     <Route path='/gallery/galleryone' element={<GalleryOneMainPage />} />
                     <Route path='/gallery/gallerytwo' element={<GalleryTwoMainPage />} />
                     <Route path='/gallery/galleryone/imagegallery/:topicName' element={<CommonImageGallery />} />
+                    <Route path='/contactus' element={<ContactUs />} />
                 </Routes>
                 <FloatingNavBar />
                 <BottomFooter />
