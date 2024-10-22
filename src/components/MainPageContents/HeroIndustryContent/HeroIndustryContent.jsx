@@ -9,7 +9,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 // import required modules
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Navigation, Pagination,Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 const HeroIndustryContent = () => {
 
@@ -58,6 +59,11 @@ const HeroIndustryContent = () => {
         setCurrentTitle(industrialSwiperSliderArray[currentIndex].imgTitle);
       };
 
+      const navigate = useNavigate();
+      const onSeeAllProjectClick = ()=>{
+      navigate('/gallery/gallerytwo');
+      }
+
   return (
     <>
     <div className="mainIndustrial-div">
@@ -73,7 +79,11 @@ const HeroIndustryContent = () => {
                 pagination={{
                 clickable: true,
                 }}
-                modules={[EffectFade, Navigation, Pagination]}
+                autoplay={{
+                  delay:2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[EffectFade, Navigation, Pagination,Autoplay]}
                 className="industrial-swiper"
                 onSlideChange={handleSlideChange}
             >
@@ -83,7 +93,7 @@ const HeroIndustryContent = () => {
                   </SwiperSlide>
                 ))}
             </Swiper>
-            <div className='industrial-cardbottombutton-div'>
+            <div className='industrial-cardbottombutton-div' onClick={() => onSeeAllProjectClick()}>
                   <button>See all Projects</button>
             </div>
         </div>

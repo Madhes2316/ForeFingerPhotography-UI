@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .customerReview-span-div{
@@ -14,6 +15,7 @@
     align-items: center;
     width: 90%;
     gap: 10px;
+    margin-bottom: auto;
 }
 
 .customerReview-span-div span{
@@ -48,7 +50,7 @@
     background-color: rgb(248 248 248 / var(--tw-bg-opacity));
     display: flex;
     flex-direction: column;
-    width: 340px;
+    width: 80vw;
     height: auto;
     gap: 10px;
     padding: 20px;
@@ -78,7 +80,7 @@
 .reviewStar-div{
     /* border: 2px solid yellow; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 

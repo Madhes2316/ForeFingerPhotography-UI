@@ -10,6 +10,7 @@ import './HeroContent.css';
 
 // import required modules
 import { EffectCards } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 const HeroContent = () => {
 
@@ -59,6 +60,11 @@ const HeroContent = () => {
     // console.log(swiperSliderArray[currentIndex].imgTitle);
   };
 
+  const navigate = useNavigate();
+  const onSeeAllProjectClick = ()=>{
+    navigate('/gallery/galleryone');
+  }
+
   return (
     <>
     <div className='maincardholder-div'>
@@ -80,7 +86,7 @@ const HeroContent = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className='cardbottombutton-div'>
+              <div className='cardbottombutton-div' onClick={() => onSeeAllProjectClick()}>
                   <button>See all Projects</button>
               </div>
         </div>
