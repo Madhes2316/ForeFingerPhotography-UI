@@ -11,6 +11,7 @@ import GalleryOneMainPage from '../GalleryPageContents/GalleryOne/GalleryOneMain
 import GalleryTwoMainPage from '../GalleryPageContents/GalleryTwo/GalleryTwoMainPage';
 import CommonImageGallery from '../GalleryPageContents/CommonImageGallery/CommonImageGallery';
 import ContactUs from '../ContactUsContents/ContactUs';
+import ServicePage from '../ServicePageContents/ServicePage';
 
 const MainPage = ()=>{
     return(
@@ -21,11 +22,12 @@ const MainPage = ()=>{
                 <Routes>
                     <Route path='/' element={<HomePageContents />} />
                     <Route path='/home' element={<HomePageContents />} />
-                    <Route path='/address' element={<AddressPage />} />
                     <Route path='/gallery' element={<GalleryMainPage />} />
                     <Route path='/gallery/galleryone' element={<GalleryOneMainPage />} />
                     <Route path='/gallery/gallerytwo' element={<GalleryTwoMainPage />} />
                     <Route path='/gallery/galleryone/imagegallery/:topicName' element={<CommonImageGallery />} />
+                    <Route path='/services' element={<ServicePage />} />
+                    <Route path='/address' element={<AddressPage />} />
                     <Route path='/contactus' element={<ContactUs />} />
                 </Routes>
                 <FloatingNavBar />

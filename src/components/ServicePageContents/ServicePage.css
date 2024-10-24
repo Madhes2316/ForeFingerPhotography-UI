@@ -1,0 +1,85 @@
+.servicePage-main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicePageContents-div{
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+    border-radius: 20px;
+    width: 90%;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicePageContents-div span{
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    color: #7b7676;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.serviceListContents-div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.serviceCard-div{
+    /* border: 2px solid red; */
+    background-color: rgba(247, 198, 1, 0.5);
+    /* border-radius: 37% 63% 70% 30% / 70% 32% 68% 30% ; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 250px;
+
+    transition: 500ms ease-in-out;
+}
+
+.serviceCard-div:hover{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    cursor: pointer;
+    color: var(--ffp-primary-color);
+    background-color: black;
+}
+
+.serviceCard-div:hover img{
+    filter: invert(1);
+}
+
+.serviceCard-div img{
+    width: 40px;
+    height: 40px;
+    fill: black;
+}
+
+.serviceCard-div h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.serviceCard-div p{
+    font-family: 'Poppins',sans-serif;
+    font-size: small;
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .servicePageContents-div span{
+        font-size: large;
+    }
+}

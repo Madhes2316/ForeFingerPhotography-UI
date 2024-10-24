@@ -32,7 +32,7 @@
 .galleryOneCard-div{
     /* max-width: 27em; */
     width: 20em;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 1em;
     overflow: hidden;
     letter-spacing: 1px;

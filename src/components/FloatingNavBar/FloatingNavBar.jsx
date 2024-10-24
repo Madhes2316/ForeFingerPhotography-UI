@@ -39,11 +39,11 @@ const FloatingNavBar = () => {
         },
         {
             id: 3,
-            liItem: 'About Us',
+            liItem: 'Services',
         },
         {
             id: 4,
-            liItem: 'Services',
+            liItem: 'About Us',
         },
         {
             id: 5,
@@ -106,7 +106,7 @@ const FloatingNavBar = () => {
                             {MainMenuArray.map((item) => (
                                 <li key={item.id} onClick={() => shortMenuClick()}>
                                     {/* Conditionally add Link for 'Home' and 'Address' */}
-                                    {(item.liItem === 'Home' || item.liItem === 'Address' || item.liItem === 'Gallery') ? (
+                                    {(item.liItem === 'Home' || item.liItem === 'Address' || item.liItem === 'Gallery' || item.liItem === 'Services') ? (
                                         <Link to={`/${item.liItem.toLowerCase().replace(/\s+/g, '-')}`}>{item.liItem}</Link>
                                     ) : (
                                         item.liItem
