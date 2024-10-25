@@ -25,61 +25,104 @@
     text-align: center;
 }
 
+.servicePageContents-div p{
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
 .serviceListContents-div{
+    /* border: 2px solid red; */
+    margin-top: 20px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,350px);
     gap: 10px;
-    padding: 10px;
-}
-
-.serviceCard-div{
-    /* border: 2px solid red; */
-    background-color: rgba(247, 198, 1, 0.5);
-    /* border-radius: 37% 63% 70% 30% / 70% 32% 68% 30% ; */
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.serviceCardContents-Div{
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    width: 350px;
+    gap: 5px;
+}
+
+.serviceTitleText-div{
+    /* border: 1px solid yellow; */
+    display: flex;
     align-items: center;
-    padding: 20px;
-    height: 250px;
-
-    transition: 500ms ease-in-out;
 }
 
-.serviceCard-div:hover{
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
-    cursor: pointer;
-    color: var(--ffp-primary-color);
-    background-color: black;
-}
-
-.serviceCard-div:hover img{
-    filter: invert(1);
-}
-
-.serviceCard-div img{
-    width: 40px;
-    height: 40px;
-    fill: black;
-}
-
-.serviceCard-div h1{
+.serviceTitleText-div h1{
     font-family: 'Poppins',sans-serif;
-    font-size: large;
     font-weight: bold;
-    text-align: center;
 }
 
-.serviceCard-div p{
+.serviceImgIcon-div {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.serviceImgIcon-div img{
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.serviceImgIcon-div:hover img {
+    transform: scale(1.1); /* Slightly scales the image up */
+}
+
+.serviceToGalleryPage-div{
+    margin-top: 50px;
+    display: flex;
+}
+
+.serviceToGalleryPage-div span{
+    color: black;
+}
+
+.serviceToGalleryPage-div button{
+    padding: 0.2em 0.5em;
+    border: 2px solid black;
+    border-radius: 1.5em;
+    background-color: white;
     font-family: 'Poppins',sans-serif;
-    font-size: small;
-    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px;
 }
 
 @media only screen and (max-width: 700px) {
     .servicePageContents-div span{
         font-size: large;
     }
+
+    .servicePageContents-div p{
+        font-size: small;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.serviceCardContents-Div{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
