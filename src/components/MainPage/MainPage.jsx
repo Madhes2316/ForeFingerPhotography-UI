@@ -12,6 +12,9 @@ import GalleryTwoMainPage from '../GalleryPageContents/GalleryTwo/GalleryTwoMain
 import CommonImageGallery from '../GalleryPageContents/CommonImageGallery/CommonImageGallery';
 import ContactUs from '../ContactUsContents/ContactUs';
 import ServicePage from '../ServicePageContents/ServicePage';
+import MainBlogPage from '../BlogPageContents/MainBlogPage'
+import PageNotFoundPage from '../PageNotFoundContents/PageNotFoundPage';
+import AboutUsPage from '../AboutUsPageContents/AboutUsPage';
 
 const MainPage = ()=>{
     return(
@@ -27,8 +30,11 @@ const MainPage = ()=>{
                     <Route path='/gallery/gallerytwo' element={<GalleryTwoMainPage />} />
                     <Route path='/gallery/galleryone/imagegallery/:topicName' element={<CommonImageGallery />} />
                     <Route path='/services' element={<ServicePage />} />
+                    <Route path='/aboutus' element={<AboutUsPage />} />
                     <Route path='/address' element={<AddressPage />} />
                     <Route path='/contactus' element={<ContactUs />} />
+                    <Route path='/blog' element={<MainBlogPage />} />
+                    <Route path='*' element={<PageNotFoundPage />} />
                 </Routes>
                 <FloatingNavBar />
                 <BottomFooter />

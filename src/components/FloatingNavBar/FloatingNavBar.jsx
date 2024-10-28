@@ -43,11 +43,15 @@ const FloatingNavBar = () => {
         },
         {
             id: 4,
-            liItem: 'About Us',
+            liItem: 'AboutUs',
         },
         {
             id: 5,
             liItem: 'Address',
+        },
+        {
+            id: 6,
+            liItem: 'Blog',
         },
     ];
 
@@ -61,6 +65,24 @@ const FloatingNavBar = () => {
     const OnContactUsButtonClick = () =>{
         navigate('/contactus');
     }
+
+    const socialMediaLink = {
+        'Fb':{
+          'link':'https://www.instagram.com/surjith_easjay?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+        },
+        'Insta':{
+          'link':'https://www.instagram.com/surjith_easjay?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+        },
+        'Wp':{
+          'link':'https://wa.me/919488187955?text=Hello%20ForeFinger%20Photography%20team'
+        },
+        'Mail':{
+          'link':'mailto:surjithcbe27@gmail.com'
+        },
+        'Call':{
+          'link':'tel:+919488187955'
+        }
+      }
 
     return (
         <>
@@ -106,7 +128,7 @@ const FloatingNavBar = () => {
                             {MainMenuArray.map((item) => (
                                 <li key={item.id} onClick={() => shortMenuClick()}>
                                     {/* Conditionally add Link for 'Home' and 'Address' */}
-                                    {(item.liItem === 'Home' || item.liItem === 'Address' || item.liItem === 'Gallery' || item.liItem === 'Services') ? (
+                                    {(item.liItem === 'Home' || item.liItem === 'Address' || item.liItem === 'Gallery' || item.liItem === 'Services' || item.liItem === 'Blog' || item.liItem === 'AboutUs') ? (
                                         <Link to={`/${item.liItem.toLowerCase().replace(/\s+/g, '-')}`}>{item.liItem}</Link>
                                     ) : (
                                         item.liItem
@@ -119,31 +141,31 @@ const FloatingNavBar = () => {
                     <div className="social-div">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href={socialMediaLink.Fb.link} target='_blank' rel='noopener noreferrer'>
                                     <img src={fbLogo} alt="Facebook logo" />
                                     <span>Facebook</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href={socialMediaLink.Insta.link} target='_blank' rel='noopener noreferrer'>
                                     <img src={instalogo} alt="Instagram logo" />
                                     <span>Instagram</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href={socialMediaLink.Wp.link} target='_blank' rel='noopener noreferrer'>
                                     <img src={wplogo} alt="Whatsapp logo" />
                                     <span>Whatsapp</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href={socialMediaLink.Mail.link} target='_blank' rel='noopener noreferrer'>
                                     <img src={maillogo} alt="Mail logo" />
                                     <span>Mail</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href={socialMediaLink.Call.link} target='_blank' rel='noopener noreferrer'>
                                     <img src={calllogo} alt="Mail logo" />
                                     <span>Call?</span>
                                 </a>

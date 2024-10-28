@@ -41,11 +41,11 @@
     font-weight: bold;
 }
 
-.callus-div:hover{
+/* .callus-div:hover{
     background-color: black;
     border: 3px solid var(--ffp-primary-color);
     color: white;
-}
+} */
 
 .socials-div ul{
     display: flex;
@@ -58,6 +58,10 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+}
+
+.socials-div ul li a:hover{
+    cursor: pointer;
 }
 
 .socials-div ul li a span{

@@ -66,7 +66,7 @@ const ServicePage = () => {
             id:9,
             spanText:'Candid photography',
             divBgColor:'#2DC9FC',
-            textColor:'black',
+            textColor:'white',
             rotateAngle: 8
         }
     ]
