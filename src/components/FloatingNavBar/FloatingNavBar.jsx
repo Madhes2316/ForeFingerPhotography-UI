@@ -5,7 +5,7 @@ import wplogo from '../../assets/social-media-logo/wp.svg';
 import maillogo from '../../assets/social-media-logo/mail.svg';
 import calllogo from '../../assets/social-media-logo/call.svg';
 import { useEffect, useState } from 'react';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link,useNavigate,useLocation  } from 'react-router-dom';
 import LongFloatingMenuBar from '../LongFloatingMenuBar/LongFloatingMenuBar';
 
 const FloatingNavBar = () => {
@@ -84,6 +84,25 @@ const FloatingNavBar = () => {
         }
       }
 
+      
+      const getPathName = () => {
+        const { pathname } = useLocation();
+        const firstSegment = pathname.split("/")[1] || "home"; // Get the first segment of the path
+    
+        // Format the path name to capitalize the first letter
+        const formattedPathName = firstSegment.replace(/^\w/, (c) => c.toUpperCase());
+    
+        // Define valid routes
+        const validRoutes = ["home", "gallery", "services", "aboutus", "address", "contactus", "blog"];
+    
+        // Check if the first segment is an exact match for a valid route
+        const isValidRoute = validRoutes.includes(firstSegment.toLowerCase());
+    
+        return isValidRoute ? formattedPathName : "404"; // Return the formatted name or "404"
+    }
+    
+
+
     return (
         <>
         <div className='floatingNavBar-div'>
@@ -94,16 +113,8 @@ const FloatingNavBar = () => {
             {isSmallScreen && !isShortMenuIconClicked && (
                 <div className="button-div">
                     <div className="iconMenu-div">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="27px"
-                            viewBox="0 -960 960 960"
-                            width="24px"
-                            fill="var(--ffp-primary-color)"
-                        >
-                            <path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z" />
-                        </svg>
-                        <a className="menu-text text-white text-2xl font-semibold">Home</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="24px" fill="#F7C601"><path d="m80-520 200-360 200 360H80Zm200 400q-66 0-113-47t-47-113q0-67 47-113.5T280-440q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T360-280q0-33-23.5-56.5T280-360q-33 0-56.5 23.5T200-280q0 33 23.5 56.5T280-200Zm-64-400h128l-64-115-64 115Zm304 480v-320h320v320H520Zm80-80h160v-160H600v160Zm80-320q-57-48-95.5-81T523-659q-23-25-33-47t-10-47q0-45 31.5-76t78.5-31q27 0 50.5 12.5T680-813q16-22 39.5-34.5T770-860q47 0 78.5 31t31.5 76q0 25-10 47t-33 47q-23 25-61.5 58T680-520Zm0-105q72-60 96-85t24-41q0-13-7.5-21t-20.5-8q-10 0-19.5 5.5T729-755l-49 47-49-47q-14-14-23.5-19.5T588-780q-13 0-20.5 8t-7.5 21q0 16 24 41t96 85Zm0-78Zm-400 45Zm0 378Zm400 0Z"/></svg>
+                        <a className="menu-text text-white text-2xl font-semibold">{getPathName()}</a>
                     </div>
                     <div className="hamburgerMenuSvg-div" onClick={() => shortMenuClick()}>
                         <svg
@@ -179,16 +190,8 @@ const FloatingNavBar = () => {
                     <div className="bottom-button-div">
                         <div className="menu-button-div">
                             <div className="logoMenu-div" onClick={() => shortMenuClick()}>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="27px"
-                                    viewBox="0 -960 960 960"
-                                    width="24px"
-                                    fill="#5f6368"
-                                >
-                                    <path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z" />
-                                </svg>
-                                <button>Home</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="24px" fill="#F7C601"><path d="m80-520 200-360 200 360H80Zm200 400q-66 0-113-47t-47-113q0-67 47-113.5T280-440q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T360-280q0-33-23.5-56.5T280-360q-33 0-56.5 23.5T200-280q0 33 23.5 56.5T280-200Zm-64-400h128l-64-115-64 115Zm304 480v-320h320v320H520Zm80-80h160v-160H600v160Zm80-320q-57-48-95.5-81T523-659q-23-25-33-47t-10-47q0-45 31.5-76t78.5-31q27 0 50.5 12.5T680-813q16-22 39.5-34.5T770-860q47 0 78.5 31t31.5 76q0 25-10 47t-33 47q-23 25-61.5 58T680-520Zm0-105q72-60 96-85t24-41q0-13-7.5-21t-20.5-8q-10 0-19.5 5.5T729-755l-49 47-49-47q-14-14-23.5-19.5T588-780q-13 0-20.5 8t-7.5 21q0 16 24 41t96 85Zm0-78Zm-400 45Zm0 378Zm400 0Z"/></svg>
+                                <button>{getPathName()}</button>
                             </div>
                             <div className="closelogo-div" onClick={() => shortMenuClick()}>
                                 <svg

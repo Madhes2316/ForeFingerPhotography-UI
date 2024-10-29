@@ -2,17 +2,113 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .aboutUsPageContents-div{
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+    /* --tw-bg-opacity: 1; */
+    /* background-color: rgb(248 248 248 / var(--tw-bg-opacity)); */
+    background-image: linear-gradient(#F7C601, #FFDD00, #FFD700);
     border-radius: 20px;
-    width: 90%;
+    width: 95%;
     margin: 20px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.aboutUsTitle-span{
+    font-family: 'Poppins',sans-serif;
+    font-size: x-large;
+    color: white;
+}
+
+.aboutUsText-div h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: x-large;
+    text-align: center;
+    font-weight: 500;
+}
+
+.aboutUsImg-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUsImg-div img{
+    width: 80vh;
+}
+
+.teamContents-div{
+    /* border: 2px solid black; */
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    gap: 10px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 20px;
+}
+
+.teamContents-div span{
+    font-family: 'Poppins',sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+.teamCard-div{
+    /* border: 2px solid yellow; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,160px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.teamCardItems{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: auto;
+}
+
+.teamCardItems img{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.teamCardItems img:hover{
+    background-color: var(--ffp-primary-color);
+}
+
+.teamCardItems h3{
+    padding-left: 7px;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size: large;
+}
+
+.teamCardItems p{
+    padding-left: 7px;
+    color: lightgray;
+    font-family: 'Poppins',sans-serif;
+    font-size: small;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .aboutUsTitle-span{
+        font-size: large;
+    }
+
+    .aboutUsText-div h1{
+        font-size: x-large;
+    }
 }
