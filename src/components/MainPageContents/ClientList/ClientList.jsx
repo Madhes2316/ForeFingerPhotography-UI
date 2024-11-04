@@ -4,7 +4,7 @@ import boschlogo from '../../../assets/Clients-logo/Bosch-logo.png';
 import yathipumpslogo from '../../../assets/Clients-logo/yathi_pumps-logo.png';
 import algopumpslogo from '../../../assets/Clients-logo/algopumps-logo.png';
 import falconpumpslogo from '../../../assets/Clients-logo/falconpumps-logo.png';
-import hartmachinerylogo from '../../../assets/Clients-logo/hartmachinery-logo.png';
+import hartmachinerylogo from '../../../assets/Clients-logo/hartmachinery-logo.png'; 
 
 const ClientList = () => {
     let companyListArray = [
