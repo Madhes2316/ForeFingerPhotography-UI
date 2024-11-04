@@ -1,16 +1,21 @@
 .topWebPageLogo-div{
     display: flex;
     justify-content: center;
-    /* border: 2px solid red; */
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .topWebPageLogo-div .ffgimg-ffptext-div{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-img{
+.ffplogo-img{
+    width: 60px;
+}
+
+.ffplogotext-img{
     width: 120px;
-    height: 120px;
 }

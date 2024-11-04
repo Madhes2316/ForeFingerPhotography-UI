@@ -62,6 +62,9 @@ const BottomFooter = () => {
                 </ul>
             </div>
             <div className="copyright-div">
+              <span>Narayanaswamy Layout,1-A, 4th Cross St, Rathinapuri, Sanganoor, Coimbatore, Tamil Nadu 641027</span>
+              <br />
+              <br />
               <span> @{today.getFullYear()}. ForeFinger Photography </span>
             </div>
             </div>

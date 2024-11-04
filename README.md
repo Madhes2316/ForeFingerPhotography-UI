@@ -1,8 +1,16 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project is created and maintained for the Website of ForeFingerPhotography,which is Photography service company based in Coimbatore,TamilNadu,India.
 
-Currently, two official plugins are available:
+As of now (November-4,2024 )This project is a static website hosted in AWS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Website Link : forefingerphotography.com(https://forefingerphotography.com/)
+
+Future Plans:
+1.Add Blog Contents
+2.Start SEO things
+3.Give Website owner authority to edit,upload,delete gallery images
+4.Maybe Include ads
+5.Add Some sort of user analytics capturing functionality
+
+

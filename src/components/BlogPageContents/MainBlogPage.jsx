@@ -6,7 +6,7 @@ const MainBlogPage = () => {
   return (
     <div className="mainBlogPage-div">
       <div className="blogPageContents-div">
-          <img src={eggCooking} alt="" />
+          <img className='blogEggToss-img' src={eggCooking} alt="" />
           <br />
           <span>We're Still</span>
           <br />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './ContactUs.css';
-import contactUsImgSrc from '../../assets/contactusPage-img/contactUs-right-img.png'
+// import contactUsImgSrc from '../../assets/contactusPage-img/contactUs-right-img.png'
 import contactUsImgSrc1 from '../../assets/contactusPage-img/contactUs-right-img-1.png'
 
 const ContactUs = () => {
@@ -17,9 +17,45 @@ const ContactUs = () => {
         setFormValue({...formValue,[e.target.name]:e.target.value})
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
+
+        // Check if honeypot field is filled
+        if (formValue.website) {
+            console.log("Spam submission detected.");
+            return; // Exit the function to ignore the submission
+        }
+        
         console.log(formValue);
+        const formData = new FormData();
+        formData.append("firstname", formValue.firstname);
+        formData.append("lastname", formValue.lastname);
+        formData.append("email", formValue.email);
+        formData.append("phone", formValue.phone);
+        formData.append("query", formValue.query);
+
+        formData.append("access_key", "7257ba7c-efe8-4fe0-ab3b-2f4303fef3b4");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            window.alert("Form Submitted Successfull,We will get back to you as soon as possible :)");
+            setFormValue({
+                firstname: '',
+                lastname: '',
+                email: '',
+                phone: '',
+                query: '',
+                website: '' // Reset honeypot field
+              });
+        } else {
+            window.alert("Something went wrong, please contact us using call or our social handles mentioned at the bottom of the website,Sorry for the inconvenience :(")
+        }
     }
 
     const onClearAllButtonClick = (e)=>{
@@ -58,6 +94,10 @@ const ContactUs = () => {
 
                         <label htmlFor="query">Queries/Suggestions:</label>
                         <textarea type="text" placeholder='Enter your Queries/Suggestions' name='query' value={formValue.query} onChange={(e) => handleChange(e)} required spellCheck={false}/>
+
+                        {/* Honeypot field */}
+                        <input type="text" name="website" style={{ display: 'none' }} onChange={handleChange} placeholder="Leave this field empty" />
+
                         <div className='contactUsformButton-div'>
                         <a className='clearAll-a' onClick={onClearAllButtonClick} >Clear All</a>
                         <button className='submit-button'>Submit</button>

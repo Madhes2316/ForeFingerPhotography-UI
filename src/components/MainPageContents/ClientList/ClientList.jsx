@@ -4,6 +4,7 @@ import boschlogo from '../../../assets/Clients-logo/Bosch-logo.png';
 import yathipumpslogo from '../../../assets/Clients-logo/yathi_pumps-logo.png';
 import algopumpslogo from '../../../assets/Clients-logo/algopumps-logo.png';
 import falconpumpslogo from '../../../assets/Clients-logo/falconpumps-logo.png';
+import hartmachinerylogo from '../../../assets/Clients-logo/hartmachinery-logo.png';
 
 const ClientList = () => {
     let companyListArray = [
@@ -27,6 +28,11 @@ const ClientList = () => {
             imgSrc:falconpumpslogo,
             companyName:'Falcon Pumps'
         },
+        {
+            id:5,
+            imgSrc:hartmachinerylogo,
+            companyName:'Hart Machinery'
+        },
     ]
   return (
     <div className='clientList-main-div'>
@@ -37,7 +43,7 @@ const ClientList = () => {
         <div className='clientBox-list-div'>
             {companyListArray.map(item => (
                 <div className='clientSpace-div'  key={item.id}>
-                    <img src={item.imgSrc} alt={item.companyName} />
+                    <img src={item.imgSrc} alt={item.companyName} className='notableClientLogo-img'/>
                 </div>
 			))}
         </div>
