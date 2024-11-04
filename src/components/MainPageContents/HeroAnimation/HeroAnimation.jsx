@@ -11,7 +11,7 @@ const HeroAnimation = () => {
             <div className='icon-quote-div'>
               <img src={stars} alt="" />
                 <p className='ffpqoute-div'>
-                  Passing <span>smiles</span> for miles
+                  Pausing <span>smiles</span> for miles
                 </p>
               <img src={stars} alt="" />
             </div>
