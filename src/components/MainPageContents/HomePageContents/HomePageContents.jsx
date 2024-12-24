@@ -7,6 +7,7 @@ import AboutUs from '../AboutUs/AboutUs';
 import ServiceList from '../ServiceList/ServiceList';
 import ProjectCounter from '../ProjectCounter/ProjectCounter';
 import CustomerReview from '../CustomerReview/CustomerReview';
+import FestivalGreeting from '../FestivalGreetingContent/FestivalGreeting';
 
 const HomePageContents = () => {
   return (
@@ -19,6 +20,7 @@ const HomePageContents = () => {
         <ProjectCounter />
         <CustomerReview />
         <ClientList />
+        <FestivalGreeting />
     </>
   )
 }
