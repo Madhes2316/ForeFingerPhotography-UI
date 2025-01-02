@@ -4,7 +4,7 @@ import christmasNewyear from '../../../assets/festivalGreeting-img/christmasNewy
 
 const FestivalGreeting = () => {
     //Make this below constant as false when u dont want to show fesival greetings
-    const showGreeting = true;
+    const showGreeting = false;
 
     const handleCall = () => {
         window.location.href = 'tel:+919488187955'; // Replace with the desired phone number
